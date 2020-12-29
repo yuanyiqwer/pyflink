@@ -32,7 +32,6 @@ source_table=table_env.from_path("datagen")
 source_table=table_env.sql_query("select * from datagen")
 result_table=source_table.select("id+1,data")
 # 5.使用table api执行插入
-print("ss")
 result_table.execute_insert("print").get_job_client().get_job_execution_result().result()
 # table_env.execute_sql("INSERT INTO print SELECT * FROM datagen").get_job_client().get_job_execution_result().result()
 
